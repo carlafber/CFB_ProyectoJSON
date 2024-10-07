@@ -1,7 +1,5 @@
 package com.example.carla_delafuentebernardino_proyectojson;
 
-import java.util.Date;
-
 public class Pelicula {
     private int id;
     private String titulo;

@@ -5,8 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.util.ArrayList;
-import java.io.File;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 
