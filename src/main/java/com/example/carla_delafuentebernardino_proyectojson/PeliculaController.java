@@ -35,7 +35,6 @@ public class PeliculaController {
 
     public static final ObjectMapper JSON_MAPPER = new ObjectMapper();
 
-
     @FXML
     void onImportarClick(ActionEvent event) {
         try {
