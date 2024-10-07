@@ -8,9 +8,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 import java.io.File;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PeliculaController {
 
@@ -44,20 +47,20 @@ public class PeliculaController {
 
             ObservableList<Pelicula> observablePeliculas = FXCollections.observableArrayList(peliculas);
             lst_peliculas.setItems(observablePeliculas);
-
-            //lista.modeloseleccion().elementoseleccionado().reaccionacambios(observando, valoranterior, nuevovalor)->{});
-            lst_peliculas.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-                if(newValue != null) {
-                    txt_titulo.setText(newValue.getTitulo());
-                    txt_fecha.setText(newValue.getFecha());
-                    txt_genero.setText(newValue.getGenero());
-                    txt_director.setText(newValue.getDirector());
-                }
-            });
-
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
+    }
 
+    public void onPeliculaClick(MouseEvent mouseEvent) {
+        Pelicula peli_selccionada = lst_peliculas.getSelectionModel().getSelectedItem();
+        if (peli_selccionada == null) {
+            Alerta.mensaje("Seleccione una película");
+        } else {
+            txt_titulo.setText(peli_selccionada.getTitulo());
+            txt_fecha.setText(peli_selccionada.getFecha());
+            txt_genero.setText(peli_selccionada.getGenero());
+            txt_director.setText(peli_selccionada.getDirector());
+        }
     }
 }
