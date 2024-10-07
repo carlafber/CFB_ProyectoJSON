@@ -3,7 +3,7 @@ package com.example.carla_delafuentebernardino_proyectojson;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class PeliculaController {
     @FXML
     private Label welcomeText;
 
