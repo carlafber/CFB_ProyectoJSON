@@ -9,11 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-
 import java.io.File;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class PeliculaController {
 
