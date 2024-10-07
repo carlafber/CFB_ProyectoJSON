@@ -4,6 +4,7 @@ module com.example.carla_delafuentebernardino_proyectojson {
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
+    requires com.fasterxml.jackson.databind;
 
     opens com.example.carla_delafuentebernardino_proyectojson to javafx.fxml;
     exports com.example.carla_delafuentebernardino_proyectojson;
