@@ -45,6 +45,7 @@ public class PeliculaController {
             ObservableList<Pelicula> observablePeliculas = FXCollections.observableArrayList(peliculas);
             lst_peliculas.setItems(observablePeliculas);
 
+            //lista.modeloseleccion().elementoseleccionado().reaccionacambios(observando, valoranterior, nuevovalor)->{});
             lst_peliculas.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
                 if(newValue != null) {
                     txt_titulo.setText(newValue.getTitulo());
